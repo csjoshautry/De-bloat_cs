@@ -1908,8 +1908,6 @@ $whitelistapps = @(
     "Microsoft Edge WebView2 Runtime"
     "Google Chrome"
     "Notepad"
-    "Notepad++"
-    ""
     "Microsoft Teams"
     "Teams Machine-Wide Installer"
     "Microsoft OneDrive"
