@@ -88,7 +88,13 @@ N/A
 #                                                                                                          #
 ############################################################################################################
 param (
-    [string[]]$customwhitelist
+    [string[]]$customwhitelist = {
+    "MicrosoftTeams",
+    "Google Chrome",
+    "Microsoft.Office.OneNote",
+    "Microsoft.People",
+    "Microsoft.Office.Todo.List"
+}
 )
 
 ##Elevate if needed
