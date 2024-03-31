@@ -48,7 +48,7 @@ $NewStore = WSReset.exe -i
 If (Get-FileSize $DebloatPath -gt 100MB and Get-FileSize $LogPath -gt 10KB) {
     Write-Host "Debloat is running or has already run..."
     Write-Host "Your MS Store was removed. Re-adding it now..."
-    Start-Process $NewStore
+    Start-Process $NewStore -NoNewWindow -Wait
     Exit
 }
 
