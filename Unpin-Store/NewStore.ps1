@@ -44,10 +44,12 @@ Function Get-FileSize {
 # Find if debloat has already run by file size
 $DebloatPath = "C:\ProgramData\Debloat"
 $LogPath = "C:\ProgramData\Debloat\Debloat.log"
+$NewStore = WSReset.exe -i
 If (Get-FileSize $DebloatPath -gt 100MB and Get-FileSize $LogPath -gt 10KB) {
     Write-Host "Debloat is running or has already run..."
-    Write-Host ""
-    WSReset.exe -i
+    Write-Host "Your MS Store was removed. Re-adding it now..."
+    Start-Process $NewStore
+    Exit
 }
 
 else {
